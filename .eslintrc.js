@@ -16,6 +16,7 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'vue/attribute-hyphenation': 'error',
+    'no-param-reassign': ['error', { props: false }],
     'vue/max-attributes-per-line': [
       'error',
       {
