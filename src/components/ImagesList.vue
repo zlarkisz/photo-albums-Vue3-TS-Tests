@@ -1,8 +1,11 @@
 <template>
-  <ul class="images">
+  <ul data-test="images-list"
+      class="images"
+  >
     <li v-for="item in images"
         :key="`image-${item.id}`"
         class="images__item"
+        data-test="images-item"
         draggable
         @dragstart="startDrag($event, item)"
     >

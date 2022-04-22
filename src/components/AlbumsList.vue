@@ -4,6 +4,7 @@
       <li v-for="album in albums"
           :key="`album-${album.id}`"
           :style="{ backgroundColor: album.color }"
+          data-test="album-item"
           @drop="onDrop($event, album.id)"
           @dragenter.prevent
           @dragover.prevent
@@ -16,6 +17,7 @@
               <BaseImage v-for="image in album.images"
                          :key="`album-image-${image}`"
                          :image="setImage(image)"
+                         data-test="album-image"
               />
             </TransitionGroup>
           </div>
